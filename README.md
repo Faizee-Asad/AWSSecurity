@@ -150,14 +150,13 @@ Depending on this, an application may occasionally load different lambda functio
 
 Using the above vulnerability, the attacker can retrieve internal files and access the lambda environment variables which lead to sensitive information disclosures, access to the S3 bucket, or privilege escalation in AWS. 
 
-How To Test the Vulnerability :
-
--> Navigate to a domain that hosts a Cloud-based App.
--> Now try to search for parameters like 'url', 'file' which could you used to pull resources from the application.
--> Create a bash script to run a loop for about 50 req on the application
-
--> Also add the following payload: file:///proc/self/environ to check if any instances of the lambda function provide a different response containing the environment variables for the lambda function
--> Finally, if the application is vulnerable we could now dump env variables
-
+#### How To Test the Vulnerability :
+```
+1. Navigate to a domain that hosts a Cloud-based App.
+2. Now try to search for parameters like 'url', 'file' which could you used to pull resources from the application.
+3. Create a bash script to run a loop for about 50 req on the application
+4. Also add the following payload: file:///proc/self/environ to check if any instances of the lambda function provide a different response containing the environment variables for the lambda function
+5. Finally, if the application is vulnerable we could now dump env variables
+```
 
 # [More info](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/concepts.html)
