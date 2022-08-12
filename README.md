@@ -13,8 +13,14 @@ The AWS Customer is in charge of assuring "Security in the Cloud" which means th
 #### Common Services in AWS
 
 ```
-1. Elastic Compute Cloud (EC2) : Launching & Managing your Instances.
+1. Elastic Compute Cloud (EC2) : Launching & Managing your Instances. [More details](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/concepts.html)
 2. Elastic Block Storage (EBS) & Elastic File System (EFS) : Store Data on Instances.
-3.
+3. Identity Access Management (IAM) : Manages access to services/resources via IAM Policies.
+4. Lambda (Serverless) : Function-as-Service
+5. Relational Database (RDS, MariaDB, Oracle, Postgres, Aurora) : Used for storing data using RDBMS.
+6. NoSQL Database (DynamoDB, DocumentDB, Neptune, Redis, DAX, ElasticSearch) : Used for stored data using non-relational database.
+7. VPC (Networking)
+8. Route53 (DNS)
+9. AWS
 ```
 
