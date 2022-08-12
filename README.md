@@ -173,7 +173,10 @@ DoW attacks involve the deliberate, repeated invocation of serverless functions,
 3. Try to test whether we can upload a large amount of files within the application.
 4. If we can upload very large files (GBs), then app is vulnerable.
 ```
-
+##### References:
+[ScienceDirect](https://www.sciencedirect.com/science/article/pii/S221421262100079X)
+[Portswigger](https://portswigger.net/daily-swig/denial-of-wallet-attacks-how-to-protect-against-costly-exploits-targeting-serverless-setups)
+[Medium](https://medium.com/geekculture/denial-of-wallet-attack-3d8ecadfbd4e)
 
 https://labs.detectify.com/2022/07/25/aws-services-security-vulnerabilities-exploitation-remediation/
 
