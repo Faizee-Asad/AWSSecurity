@@ -38,9 +38,9 @@ The AWS Customer is in charge of assuring "Security in the Cloud" which means th
 ```
 #### Advantages of AWS
 ```
-Security
-Scalability
-Reliability
+. Security
+. Scalability
+. Reliability
 Cost-Effective
 Easy to Use
 Fflexibility
