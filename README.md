@@ -52,15 +52,23 @@ Lambda is a computing service that enables us to run programs without having to 
 
 #### Lambda Definitions:
 
+```
 Function: A function is a resource that you can use to run your code in Lambda.
-Trigger: A trigger is a resource or configuration that calls a Lambda function.
-Event: An event is a JSON-formatted document that includes data for a Lambda function to process. 
-Execution Environment: An execution environment gives your Lambda function a safe and isolated runtime environment. 
-Deployment Package:  You use a deployment package to distribute the Lambda function code. The two deployment packages are zip & container images.
-Runtime: The runtime offers a language-specific environment that operates in an execution environment.
-Layer:  A Lambda layer is a zip file archive that can include additional code containing libraries, a custom runtime, data, or configuration files. There can be up to 5 layers.
-Destination: The place where Lambda can transmit events from an asynchronous invocation is known as a destination.
 
+Trigger: A trigger is a resource or configuration that calls a Lambda function.
+
+Event: An event is a JSON-formatted document that includes data for a Lambda function to process. 
+
+Execution Environment: An execution environment gives your Lambda function a safe and isolated runtime environment. 
+
+Deployment Package:  You use a deployment package to distribute the Lambda function code. The two deployment packages are zip & container images.
+
+Runtime: The runtime offers a language-specific environment that operates in an execution environment.
+
+Layer:  A Lambda layer is a zip file archive that can include additional code containing libraries, a custom runtime, data, or configuration files. There can be up to 5 layers.
+
+Destination: The place where Lambda can transmit events from an asynchronous invocation is known as a destination.
+```
 #### The Cost for the lambda function depends on 2 factors:
 
 Compute Time: The cost depends on the total duration of time the function has been run and also the amount of memory being provisioned, measured in GB seconds. 
