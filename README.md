@@ -86,12 +86,11 @@ No of Requests: The charges are incurred for every million requests per month.
 -> Database Access
 ```
 #### Important Lambda Commands:
-
 1. Returns information about a version of an AWS Lambda layer
 ```
 aws lambda get-layer-version --layer-name <value> --version-number <value>
 ```
-2.Lists event source mappings.
+2. Lists event source mappings.
 ```
 aws lambda list-event-source-mappings
 ```
