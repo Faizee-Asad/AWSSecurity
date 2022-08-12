@@ -94,43 +94,52 @@ aws lambda get-layer-version --layer-name <value> --version-number <value>
 ```
 aws lambda list-event-source-mappings
 ```
-
-9/
-  -> Returns the permission policy for a version of an AWS Lambda layer.
+3. Returns the permission policy for a version of an AWS Lambda layer.
+```
 aws lambda get-layer-version-policy --layer-name <value> --version-number <value>
--> Invokes a Lambda function.
+```
+4. Invokes a Lambda function.
+```
 aws lambda invoke --function-name <value>
-
-  -> Retrieves details about your account's limits and usage in an AWS Region.
+```
+5. Retrieves details about your account's limits and usage in an AWS Region.
+```
 aws lambda get-account-settings
--> Returns a list of code signing configurations.
+```
+6. Returns a list of code signing configurations.
+```
 aws lambda list-code-signing-configs
-
-  Devansh Bordia
-@devansh3008
-·
-Jul 24
--> Returns information about specified code signing configuration
+```
+7. Returns information about specified code signing configuration
+```
 aws lambda get-code-signing-config --code-signing-config-arn <value>
--> Returns a list of versions, with the version-specific configuration of each
+```
+8. Returns a list of versions, with the version-specific configuration of each
+```
 aws lambda list-versions-by-function --function-name value
-  
-  Devansh Bordia
-@devansh3008
-·
-Jul 24
--> Creates an AWS Lambda layer from a ZIP archive.
+```  
+9. Creates an AWS Lambda layer from a ZIP archive.
+```
 aws lambda publish-layer-version --layer-name <value>
--> Creates a version from the current code and configuration of a function.
+```
+10. Creates a version from the current code and configuration of a function.
+```
 aws lambda publish-version --function-name <value>
-  
-  -> Updates the configuration of a Lambda function alias.
+```  
+11. Updates the configuration of a Lambda function alias.
+```
 aws lambda update-alias --function-name <value>
--> Deletes a Lambda function alias.
+```
+12. Deletes a Lambda function alias.
+```
 aws lambda delete-alias --function-name <value> --name <value>
-  
-  -> Deletes a Lambda function.
+```  
+13. Deletes a Lambda function.
+```
 aws lambda delete-function --function-name <value>
--> Deletes a version of an AWS Lambda layer.
+```
+14. Deletes a version of an AWS Lambda layer.
+```
 aws lambda delete-layer-version --layer-name <value> --version-number <value>
+```
 # [More info](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/concepts.html)
