@@ -158,5 +158,24 @@ Using the above vulnerability, the attacker can retrieve internal files and acce
 4. Also add the following payload: file:///proc/self/environ to check if any instances of the lambda function provide a different response containing the environment variables for the lambda function
 5. Finally, if the application is vulnerable we could now dump env variables
 ```
+## Denial of Wallet (DOW)
+
+Denial of Wallet is a denial of service (DOS) based vulnerability in which the attacker could upload a very large file which might incur costs within the AWS which might lead to bankruptcy of companies due to high amount of charges.
+
+Denial-of-Service attacks take advantage of the fact that serverless suppliers charge customers based on the amount of resources needed by an application, which means that if an attacker floods a website with traffic, the site owner could be hit with a hefty bill.
+
+DoW attacks involve the deliberate, repeated invocation of serverless functions, leaving the victim with inflated consumption bills and a depleted financial state. Excessive function run time, a high number of invocations, and higher resource use all raise execution costs.
+
+#### How To Test the Vulnerability :
+```
+1. Register within the Application
+2. Now search for a file upload features to upload documents
+3. Try to test whether we can upload a large amount of files within the application.
+4. If we can upload very large files (GBs), then app is vulnerable.
+```
+
+
+https://labs.detectify.com/2022/07/25/aws-services-security-vulnerabilities-exploitation-remediation/
+
 
 # [More info](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/concepts.html)
