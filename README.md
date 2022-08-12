@@ -38,11 +38,43 @@ The AWS Customer is in charge of assuring "Security in the Cloud" which means th
 ```
 #### Advantages of AWS
 ```
-. Security
-. Scalability
-. Reliability
-Cost-Effective
-Easy to Use
-Fflexibility
+-> Security
+-> Scalability
+-> Reliability
+-> Cost-Effective
+-> Easy to Use
+-> Fflexibility
+```
+
+## Introduction To Lambda (Serverless)
+
+Lambda is a computing service that enables us to run programs without having to manage servers. As a result of their event-driven nature and ability to run code on a managed pool of computing resources, they are also known as function-as-services (FAAS).
+
+#### Lambda Definitions:
+
+Function: A function is a resource that you can use to run your code in Lambda.
+Trigger: A trigger is a resource or configuration that calls a Lambda function.
+Event: An event is a JSON-formatted document that includes data for a Lambda function to process. 
+Execution Environment: An execution environment gives your Lambda function a safe and isolated runtime environment. 
+Deployment Package:  You use a deployment package to distribute the Lambda function code. The two deployment packages are zip & container images.
+Runtime: The runtime offers a language-specific environment that operates in an execution environment.
+Layer:  A Lambda layer is a zip file archive that can include additional code containing libraries, a custom runtime, data, or configuration files. There can be up to 5 layers.
+Destination: The place where Lambda can transmit events from an asynchronous invocation is known as a destination.
+
+#### The Cost for the lambda function depends on 2 factors:
+
+Compute Time: The cost depends on the total duration of time the function has been run and also the amount of memory being provisioned, measured in GB seconds. 
+No of Requests: The charges are incurred for every million requests per month.
+
+#### Lambda Features:
+
+```
+-> Concurrency & Scaling Controls
+-> Functions defined as Container Images
+-> Code Signing
+-> Lambda Extensions
+-> Function Blueprints
+-> File System Access
+-> Database Access
 ```
 # [More info](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/concepts.html)
