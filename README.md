@@ -13,7 +13,7 @@ The AWS Customer is in charge of assuring "Security in the Cloud" which means th
 #### Common Services in AWS
 
 ```
-1. Elastic Compute Cloud (EC2) : Launching & Managing your Instances. [More details](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/concepts.html)
+1. Elastic Compute Cloud (EC2) : Launching & Managing your Instances. 
 2. Elastic Block Storage (EBS) & Elastic File System (EFS) : Store Data on Instances.
 3. Identity Access Management (IAM) : Manages access to services/resources via IAM Policies.
 4. Lambda (Serverless) : Function-as-Service
@@ -23,4 +23,4 @@ The AWS Customer is in charge of assuring "Security in the Cloud" which means th
 8. Route53 (DNS)
 9. AWS
 ```
-
+[More details](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/concepts.html)
