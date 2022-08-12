@@ -142,4 +142,22 @@ aws lambda delete-function --function-name <value>
 ```
 aws lambda delete-layer-version --layer-name <value> --version-number <value>
 ```
+## Misconfigured Lambda Alias Routing
+
+Lambda includes a mechanism for distributing traffic by generating one or more function aliases. An alias represents the use of numerous versions of a Lambda function. We can now divide the traffic for the various lambda function using alias routing.
+
+Depending on this, an application may occasionally load different lambda function instances. If the application has any security flaws such as SSRF, LFI, etc when obtaining the resource from a user-provided URL parameter. 
+
+Using the above vulnerability, the attacker can retrieve internal files and access the lambda environment variables which lead to sensitive information disclosures, access to the S3 bucket, or privilege escalation in AWS. 
+
+How To Test the Vulnerability :
+
+-> Navigate to a domain that hosts a Cloud-based App.
+-> Now try to search for parameters like 'url', 'file' which could you used to pull resources from the application.
+-> Create a bash script to run a loop for about 50 req on the application
+
+-> Also add the following payload: file:///proc/self/environ to check if any instances of the lambda function provide a different response containing the environment variables for the lambda function
+-> Finally, if the application is vulnerable we could now dump env variables
+
+
 # [More info](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/concepts.html)
