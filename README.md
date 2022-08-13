@@ -237,7 +237,6 @@ In Lambda, environment variables are used to pass IAM credentials to the functio
 -> Restrict Permission on IAM Policies when using Lambda function.
 ```
 # [XMIND](https://www.xmind.app/m/kCsXvr/)
-https://labs.detectify.com/2022/07/25/aws-services-security-vulnerabilities-exploitation-remediation/
 
+#https://labs.detectify.com/2022/07/25/aws-services-security-vulnerabilities-exploitation-remediation/
 
-# [More info](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/concepts.html)
