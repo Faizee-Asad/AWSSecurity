@@ -210,6 +210,22 @@ Lambda Backdoor is a mechanism for an attacker to maintain access to AWS by crea
 ```
 #### References: [Hackingthe](https://hackingthe.cloud/aws/post_exploitation/lambda_persistence/)        [Frichetten](https://frichetten.com/blog/revisiting_lambda_persistence/)        [Paloaltonetworks](https://unit42.paloaltonetworks.com/gaining-persistency-vulnerable-lambdas/)
 
+## Stealing Credentials from Lambda Function
+
+In Lambda, environment variables are used to pass IAM credentials to the function. The advantage for the attacker is that file read vulnerability, such as XML External Entity assaults or SSRF, which enable the file protocol, can allow the leakage of these credentials.
+
+#### Common Appsec Vulnerabilities for Lambda:
+```
+1. Server Side Request Forgery (SSRF)
+2. XML External Entity (XXE)
+3. Insecure Deserialization
+4. Remote Code Execution
+5. Command Injection
+6. Malicious File Upload
+7. SQL Injection
+8. Event Injection
+```
+#### References:    [Kontra](https://application.security/free/kontra-aws-clould-top-10)        [Cloudone](https://cloudone.trendmicro.com/docs/application-security/policies/)        [Rhinosecuritylabs](https://rhinosecuritylabs.com/cloud-security/cloudgoat-vulnerable-lambda-functions/)        [Sysdig](https://sysdig.com/blog/exploit-mitigate-aws-lambdas-mitre/)
 https://labs.detectify.com/2022/07/25/aws-services-security-vulnerabilities-exploitation-remediation/
 
 
