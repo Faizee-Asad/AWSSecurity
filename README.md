@@ -226,6 +226,17 @@ In Lambda, environment variables are used to pass IAM credentials to the functio
 8. Event Injection
 ```
 #### References:    [Kontra](https://application.security/free/kontra-aws-clould-top-10)        [Cloudone](https://cloudone.trendmicro.com/docs/application-security/policies/)        [Rhinosecuritylabs](https://rhinosecuritylabs.com/cloud-security/cloudgoat-vulnerable-lambda-functions/)        [Sysdig](https://sysdig.com/blog/exploit-mitigate-aws-lambdas-mitre/)
+
+## Lambda Security Best Practices
+```
+-> Utilize One Role per Lambda Function.
+-> Do not store AWS Credentials in Lambda function code or configuration.
+-> Use API Authorization when using API Gateway to trigger the lambda function.
+-> Store secrets in EC2 Systems Manager Parameter.
+-> Store Lambda Environment Variables with Encryption Helpers.
+-> Restrict Permission on IAM Policies when using Lambda function.
+```
+[Xmind](<iframe src='https://www.xmind.app/embed/kCsXvr/' width='750' height='422' frameborder='0' scrolling='no' allowfullscreen="true"></iframe>)
 https://labs.detectify.com/2022/07/25/aws-services-security-vulnerabilities-exploitation-remediation/
 
 
