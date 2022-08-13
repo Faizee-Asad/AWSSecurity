@@ -175,6 +175,41 @@ DoW attacks involve the deliberate, repeated invocation of serverless functions,
 ```
 ##### References: [ScienceDirect](https://www.sciencedirect.com/science/article/pii/S221421262100079X)       [Portswigger](https://portswigger.net/daily-swig/denial-of-wallet-attacks-how-to-protect-against-costly-exploits-targeting-serverless-setups)        [Medium](https://medium.com/geekculture/denial-of-wallet-attack-3d8ecadfbd4e)
 
+## Exfiltrating Lambda Event Data
+
+An attacker can query the lambda runtime API endpoint and steal event data if they were able to run commands on the system. This data is made available to the function via the runtime interface.
+
+Lambda functions also have event data that is passed to the function when it is started. Unlike IAM credentials, this data is accessible over standard SSRF at:
+```
+http://localhost:9001/2018-06-01/runtime/invocation/next
+```
+#### Important Environment Variables:
+``` 
+-> _HANDLER: Location to the handler.
+–> LAMBDA_TASK_ROOT – The directory that contains the function code.
+-> AWS_LAMBDA_RUNTIME_API – The host and port of the runtime API: 127.0.0.1:9001.
+```
+#### Lambda Runtime API Methods:
+```
+-> Next Invocation: GET /runtime/invocation/next
+-> Invocation response : POST /runtime/invocation/AwsRequestId/response
+-> Invocation error: POST /runtime/invocation/AwsRequestId/error
+-> Initialization error Path: POST /runtime/init/error
+```
+#### References: [AWS](https://docs.aws.amazon.com/lambda/latest/dg/runtimes-api.html)        [Hackingthe](https://hackingthe.cloud/aws/exploitation/lambda-steal-iam-credentials/)
+
+## Lambda Backdoor
+
+Lambda Backdoor is a mechanism for an attacker to maintain access to AWS by creating a cross-account role and attaching a lambda function to that role. Now an attacker can utilize this lambda function to exfiltrate data to its own server and get administrator access to AWS.
+
+#### Steps To Create Lambda Backdoor:
+```
+1. Create Cross Account Privilege Role.
+2. Create a Lambda Service Role.
+3. Now customize the function runtime and set up a listener to accept the data from the lambda function.
+```
+#### References: [Hackingthe](https://hackingthe.cloud/aws/post_exploitation/lambda_persistence/)        [Frichetten](https://frichetten.com/blog/revisiting_lambda_persistence/)        [Paloaltonetworks](https://unit42.paloaltonetworks.com/gaining-persistency-vulnerable-lambdas/)
+
 https://labs.detectify.com/2022/07/25/aws-services-security-vulnerabilities-exploitation-remediation/
 
 
